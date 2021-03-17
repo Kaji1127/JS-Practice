@@ -60,7 +60,7 @@ const activeDot = function (slide) {
 	document.querySelectorAll('.dots__dot').forEach((dot) => {
 		dot.classList.remove('dots__dot--active');
 	});
-	document.querySelector(`.dots__dot[data-slide = "${slide}"]`).classList.add('dots__dot--active');
+	document.querySelector(`.dots__dot[data-slide="${slide}"]`).classList.add('dots__dot--active');
 };
 const goToSlide = function (slide) {
 	slides.forEach((s, i) => {
@@ -95,12 +95,36 @@ const init = function () {
 };
 init();
 
+// TAB
+const tabs = document.querySelectorAll('.tab__btn');
+const tabContainer = document.querySelector('.tab__container');
+const tabContent = document.querySelectorAll('.tab__content');
+
 btnLeft.addEventListener('click', prevSlide);
 btnRight.addEventListener('click', nextSlide);
 dotsContainer.addEventListener('click', function (e) {
 	if (e.target.classList.contains('dots__dot')) {
+		// const slide = e.target.dateset.slide;
 		const { slide } = e.target.dataset;
 		goToSlide(slide);
 		activeDot(slide);
 	}
+});
+
+tabContainer.addEventListener('click', function (e) {
+	const clicked = e.target.closest('.tab__btn');
+
+	if (!clicked) {
+		return; //関数の実行を中断
+	}
+
+	tabs.forEach((a) => {
+		a.classList.remove('tab__btn--active');
+	});
+	tabContent.forEach((a) => {
+		a.classList.remove('tab__content--active');
+	});
+	clicked.classList.add('tab__btn--active');
+
+	document.querySelector(`.tab__content--${clicked.dataset.tab}`).classList.add('tab__content--active');
 });

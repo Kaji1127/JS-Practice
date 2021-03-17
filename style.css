@@ -123,7 +123,7 @@ body {
 	border-top: 1px solid #000;
 }
 
-.section--operations {
+.section--tab {
 	background-color: lightgreen;
 }
 
@@ -139,7 +139,7 @@ body {
 	position: absolute;
 	top: 0;
 	width: 100%;
-	height: 95%;
+	height: 93%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -197,4 +197,53 @@ body {
 }
 .dots__dot--active {
 	opacity: 1;
+}
+
+/* Tab */
+.tab {
+	max-width: 80rem;
+	margin: 5rem auto 0;
+	width: 100%;
+	background-color: #fff;
+	border-radius: 4px;
+}
+.tab__container {
+	display: flex;
+	justify-content: space-around;
+}
+.tab__btn {
+	border: none;
+	border-radius: 100px;
+	width: 20rem;
+	padding: 1.5rem 0;
+	transform: translateY(-50%);
+	font-size: 1.6rem;
+	font-weight: 700;
+	font-family: 'Recursive', '游ゴシック', sans-serif;
+	outline: none;
+	transition: all 0.5s;
+}
+.tab__btn--active {
+	transform: translateY(-65%);
+	box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.4);
+}
+.tab__btn--1 {
+	background-color: yellow;
+}
+.tab__btn--2 {
+	background-color: orangered;
+}
+.tab__btn--3 {
+	background-color: lightblue;
+}
+.tab__content {
+	display: none;
+	font-size: 2rem;
+	height: 25rem;
+	text-align: justify;
+	line-height: 2;
+}
+.tab__content--active {
+	display: block;
+	padding: 1.5rem 5rem 6rem;
 }
