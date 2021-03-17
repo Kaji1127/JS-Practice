@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JS - Practice</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Recursive:wght@400;500;700;900&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- Header -->
+		<header class="header">
+			<!-- Navigation -->
+			<nav class="nav">
+				<p class="nav__logo">JS Practice</p>
+				<ul class="nav__links">
+					<li class="nav__item"><a href="#slider" class="nav__link">Slider</a></li>
+					<li class="nav__item"><a href="#operations" class="nav__link">Operations</a></li>
+					<li class="nav__item"><a href="" class="nav__link">Modal</a></li>
+				</ul>
+			</nav>
+			<!-- /Navigation -->
+			<!-- FV -->
+			<div class="fv">
+				<div class="fv__content">
+					<h1 class="fv__title">JavaScript Practice</h1>
+					<button class="btn btn--view">View More &DownArrow;</button>
+				</div>
+			</div>
+			<!-- /FV -->
+		</header>
+		<!-- /Header -->
+
+		<!-- Slider -->
+		<section class="section" id="slider">
+			<h2 class="heading-primary">01.Slider</h2>
+			<div class="slider">
+				<div class="slide">
+					<img class="slide__img" src="img/fox-1.jpg" alt="キツネの写真" />
+				</div>
+				<div class="slide">
+					<img class="slide__img" src="img/fox-2.jpg" alt="キツネの写真" />
+				</div>
+				<div class="slide">
+					<img class="slide__img" src="img/fox-3.jpg" alt="キツネの写真" />
+				</div>
+				<div class="slide">
+					<img class="slide__img" src="img/fox-4.jpg" alt="キツネの写真" />
+				</div>
+				<div class="slide">
+					<img class="slide__img" src="img/fox-5.jpg" alt="キツネの写真" />
+				</div>
+
+				<button class="slider__btn slider__btn--left">&larr;</button>
+				<button class="slider__btn slider__btn--right">&rarr;</button>
+				<div class="dots"></div>
+			</div>
+		</section>
+		<!-- /Slider -->
+
+		<!-- Operations -->
+		<section class="section section--operations" id="operations">
+			<h2 class="heading-primary">02.Operations</h2>
+		</section>
+		<!-- /Slider -->
+		<!-- JavaScript File-->
+		<script src="node_modules/smoothscroll-polyfill/dist/smoothscroll.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
