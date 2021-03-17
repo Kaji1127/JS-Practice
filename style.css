@@ -222,6 +222,7 @@ body {
 	font-family: 'Recursive', '游ゴシック', sans-serif;
 	outline: none;
 	transition: all 0.5s;
+	cursor: pointer;
 }
 .tab__btn--active {
 	transform: translateY(-65%);
