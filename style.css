@@ -38,6 +38,7 @@ body {
 .nav__links {
 	display: flex;
 	list-style: none;
+	align-items: center;
 }
 .nav__item {
 	margin-left: 5rem;
@@ -46,6 +47,17 @@ body {
 .nav__link {
 	color: #333;
 	text-decoration: none;
+}
+
+.btn--modal {
+	background-image: -webkit-linear-gradient(to right bottom, #ff512f, #f09819);
+	background-image: linear-gradient(to right bottom, #ff512f, #f09819);
+	padding: 1rem 3rem;
+	border-radius: 100px;
+	cursor: pointer;
+}
+.nav__btn .nav__link {
+	color: #fff;
 }
 /* First-View */
 .fv {
@@ -247,4 +259,70 @@ body {
 .tab__content--active {
 	display: block;
 	padding: 1.5rem 5rem 6rem;
+}
+/* Modal */
+.modal {
+	max-width: 70rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 2000;
+	transform: translate(-50%, -50%);
+	background-color: #eee;
+	padding: 5rem 10rem;
+	transition: all 0.6s;
+}
+.form {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 2.5rem;
+	align-items: center;
+	margin-top: 3rem;
+}
+.heading-secondary {
+	font-size: 4rem;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+label,
+input {
+	font-size: 1.6rem;
+}
+input {
+	padding: 0.8rem 2rem;
+}
+.btn--close {
+	position: absolute;
+	top: 2.5rem;
+	font-size: 3rem;
+	right: 4rem;
+	border: none;
+	cursor: pointer;
+	outline: none;
+}
+.btn--form {
+	justify-self: center;
+	grid-column: 1 / span 2;
+	padding: 1rem 3rem;
+	background-color: orangered;
+	border: none;
+	border-radius: 100px;
+	color: #fff;
+	cursor: pointer;
+}
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1500;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	backdrop-filter: blur(5px);
+	transition: all 0.6s;
+}
+
+.hidden {
+	visibility: hidden;
+	opacity: 0;
 }

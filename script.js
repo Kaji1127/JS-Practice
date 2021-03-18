@@ -128,3 +128,29 @@ tabContainer.addEventListener('click', function (e) {
 
 	document.querySelector(`.tab__content--${clicked.dataset.tab}`).classList.add('tab__content--active');
 });
+
+// Modal Window
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+const btnModal = document.querySelector('.btn--modal');
+const btnClose = document.querySelector('.btn--close');
+
+const openModal = function (e) {
+	e.preventDefault();
+	modal.classList.remove('hidden');
+	overlay.classList.remove('hidden');
+};
+
+const closeModal = function (e) {
+	modal.classList.add('hidden');
+	overlay.classList.add('hidden');
+};
+
+btnModal.addEventListener('click', openModal);
+btnClose.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
+document.addEventListener('keydown', function (e) {
+	if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+		closeModal();
+	}
+});
