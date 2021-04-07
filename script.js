@@ -95,11 +95,6 @@ const init = function () {
 };
 init();
 
-// TAB
-const tabs = document.querySelectorAll('.tab__btn');
-const tabContainer = document.querySelector('.tab__container');
-const tabContent = document.querySelectorAll('.tab__content');
-
 btnLeft.addEventListener('click', prevSlide);
 btnRight.addEventListener('click', nextSlide);
 dotsContainer.addEventListener('click', function (e) {
@@ -110,6 +105,11 @@ dotsContainer.addEventListener('click', function (e) {
 		activeDot(slide);
 	}
 });
+
+// TAB
+const tabs = document.querySelectorAll('.tab__btn');
+const tabContainer = document.querySelector('.tab__container');
+const tabContent = document.querySelectorAll('.tab__content');
 
 tabContainer.addEventListener('click', function (e) {
 	const clicked = e.target.closest('.tab__btn');
